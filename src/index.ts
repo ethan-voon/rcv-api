@@ -1,13 +1,22 @@
 import express from "express";
-const app = express();
-const port = 8080; // default port to listen
+import loaders from "./loaders/index";
 
-app.get("/", (req, res) => {
-  res.send("Ranked Choice Voting coming soon!");
-});
+async function startServer() {
+  const app = express();
+  const port = 8080; // @TODO make this an environment variable
 
-// start the Express server
-app.listen(port, () => {
-  // tslint:disable-next-line:no-console
-  console.log(`server started at http://localhost:${port}`);
-});
+  await loaders({ expressApp: app });
+
+  app
+    .listen(port, () => {
+      // tslint:disable-next-line:no-console
+      console.log(`Server started at http://localhost:${port}`);
+    })
+    .on("error", (err) => {
+      // tslint:disable-next-line:no-console
+      console.log(`Server error: ${err}`);
+      process.exit(1);
+    });
+}
+
+startServer();

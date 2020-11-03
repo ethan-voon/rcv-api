@@ -2,14 +2,15 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "target": "esnext",
-    "noImplicitAny": true,
+    "module": "esnext",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"]
-    }
+    },
+    "noImplicitAny": true
   },
   "include": ["src/**/*"]
 }

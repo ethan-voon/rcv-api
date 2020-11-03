@@ -6,14 +6,29 @@ This project aims to provide a public web application programming interface (API
 
 This initial version shall provide the following functionality:
 
-- Election creation, modification, and deletion
+- Election CRUD
   - Elections are public. Anyone with a link, or election token, can vote
   - The election creator is the only one who can modify or delete the election.
-- Elector creation, modification, and deletion
+- Elector CRUD
   - Electors are the API’s equivalent to a “user”
-- Electee creation and deletion
+- Electee CRUD
+  - An elector paired with an election
+  - There is no limit to the number of electees
 
-Subsequent iterations of the API hope to introduce grouping, permissioning, controls, and more.
+## Future Features
+
+Subsequent iterations of the API hope to introduce more robust features. For example:
+
+- Roles & Permissions
+  - Election creator is the first Administrator
+  - Administrators can assign roles that grant specific permissions
+- Groups
+  - Object name pending...
+  - Elections happen within a group context
+    - An elector must belong to the group to vote
+- Enhanced profiles
+  - Electees can provide specific information
+    - e.g. Policy stance, history, etc.
 
 ## Implementation Details
 

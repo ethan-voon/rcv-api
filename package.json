@@ -7,10 +7,9 @@
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build --scripts-prepend-node-path",
-    "start": "node .",
+    "start": "node -r esm .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ethan-voon/rcv-api.git"
@@ -21,9 +20,16 @@
     "url": "https://github.com/ethan-voon/rcv-api/issues"
   },
   "homepage": "https://github.com/ethan-voon/rcv-api#readme",
+  "esm": {
+    "cjs": true
+  },
   "dependencies": {
+    "@std/esm": "^0.26.0",
     "@types/express": "^4.17.8",
-    "express": "^4.17.1"
+    "@types/mocha": "^8.0.3",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1"
   },
   "devDependencies": {
     "tslint": "^6.1.3",
