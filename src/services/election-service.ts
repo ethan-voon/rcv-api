@@ -1,7 +1,7 @@
 import { IElection } from "../interfaces/election";
 
 export default class ElectionService {
-  // @TODO inject an elector service
+  // @TODO Construct for use with dependency injection, try using typedi
   // constructor() {}
 
   async getElection(electionId: number): Promise<IElection> {

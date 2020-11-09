@@ -30,6 +30,20 @@ Subsequent iterations of the API hope to introduce more robust features. For exa
   - Electees can provide specific information
     - e.g. Policy stance, history, etc.
 
-## Implementation Details
+## Architecture
 
-@TODO
+Project implementation aims to be a microservice on the surface and adhere to the [Principle of Separation of Conerns](https://en.wikipedia.org/wiki/Separation_of_concerns) on the back-end. As such, folder hierarchy organizes files into the API layer, services layer, and data layer\*. Loaders exist as middleware between the application and defined API routes. This is done for a few reasons:
+
+- Clarity of purpose.
+- Ease of flexibility, maintenance, and reuse; e.g. doesn't become _spaghetti code_.
+- Ease of testing; e.g. write _unit_ tests **and** _integration_ tests.
+
+For more info, see [SOLID design principles](https://en.wikipedia.org/wiki/SOLID). Or, check out [this article](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+
+\*Initial version is sticking to a single data model as opposed to mapping to a different object from layer to layer. May change in the future...
+
+## Implementation
+
+@TODO Decide on database technology. Current top contender is [MySQL](https://www.mysql.com/) with [Sequelize](https://sequelize.org/master/index.html)
+
+@TODO What else does this README need?

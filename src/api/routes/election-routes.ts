@@ -8,6 +8,7 @@ export default (app: Router) => {
 
   route.get("/:electionId", async (req: Request, res: Response) => {
     const electionId: number = +req.params.electionId;
+    // @TODO Dependency injection
     const electionService = new ElectionService();
     const result = await electionService.getElection(electionId);
 

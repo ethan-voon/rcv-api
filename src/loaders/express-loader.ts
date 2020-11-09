@@ -2,7 +2,7 @@ import express from "express";
 import routes from "../api/index";
 
 export default ({ app }: { app: express.Application }) => {
-  // Health Checks
+  // Health checks
   app.get("/status", (_req, res) => {
     res.status(200).end();
   });
