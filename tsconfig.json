@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    },
-    "noImplicitAny": true
-  },
-  "include": ["src/**/*"]
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"target": "esnext",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"paths": {
+			"*": ["node_modules/*"]
+		},
+		"noImplicitAny": true
+	},
+	"include": ["src/**/*"]
 }

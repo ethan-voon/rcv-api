@@ -1,0 +1,10 @@
+{
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.wordWrap": "on",
+	"prettier.packageManager": "yarn",
+	"prettier.tabWidth": 4,
+	"prettier.useTabs": true,
+	"editor.insertSpaces": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}

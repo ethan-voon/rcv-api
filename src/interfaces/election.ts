@@ -1,5 +1,5 @@
 export interface IElection {
-  electionId: number;
-  startDate: Date;
-  endDate: Date;
+	electionId: number;
+	startDate: Date;
+	endDate: Date;
 }
